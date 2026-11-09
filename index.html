@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Heron Security</title>
+<meta name="description" content="Heron Security. Site under construction. Contact hello@heronsecurity.io">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cg transform='translate(4 4) scale(.875)'%3E%3Cpath fill='none' stroke='%23000' stroke-width='4.6' stroke-linecap='round' stroke-linejoin='round' d='M8 9 L26 12 C29 8 35 9 34 14 C33 19 25 21 27 27 C29 32 40 31 47 35 L55 40 L44 41 C40 41 35 40 32 36 M42 41 V52'/%3E%3C/g%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #ffffff;
+    --fg: #000000;
+    --muted: #6b6b6b;
+    --line: #000000;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #000000;
+      --fg: #ffffff;
+      --muted: #8f8f8f;
+      --line: #ffffff;
+    }
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { height: 100%; }
+  body {
+    background: var(--bg);
+    color: var(--fg);
+    font: 400 14px/1.6 "Geist Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    display: flex;
+    flex-direction: column;
+    padding: 24px 16px;
+  }
+  main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    max-width: 520px;
+    margin: 0 auto;
+  }
+  .mark { width: 56px; height: 56px; color: var(--fg); margin-bottom: 28px; }
+  .lockup { display: flex; align-items: baseline; gap: 10px; margin-bottom: 40px; }
+  .lockup .name { font-size: 28px; font-weight: 500; letter-spacing: -0.02em; }
+  .lockup .slash { color: var(--muted); font-size: 20px; }
+  .lockup .co { font-size: 12px; letter-spacing: 0.32em; }
+  .status {
+    display: inline-block;
+    border: 1px solid var(--line);
+    padding: 4px 10px;
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    align-self: flex-start;
+  }
+  .status::before { content: "\25A0  "; animation: blink 1.2s steps(1) infinite; }
+  @keyframes blink { 50% { opacity: 0; } }
+  @media (prefers-reduced-motion: reduce) { .status::before { animation: none; } }
+  p { margin-bottom: 16px; }
+  .muted { color: var(--muted); }
+  a { color: var(--fg); text-decoration: none; border-bottom: 1px solid var(--fg); }
+  a:hover { background: var(--fg); color: var(--bg); }
+  .contact { margin-top: 24px; padding-top: 16px; border-top: 1px solid var(--line); }
+  footer {
+    width: 100%;
+    max-width: 520px;
+    margin: 0 auto;
+    font-size: 12px;
+    color: var(--muted);
+  }
+</style>
+</head>
+<body>
+  <main>
+    <svg class="mark" viewBox="0 0 64 64" aria-hidden="true">
+      <g transform="translate(4 4) scale(.875)">
+        <path fill="none" stroke="currentColor" stroke-width="4.6" stroke-linecap="round" stroke-linejoin="round" d="M8 9 L26 12 C29 8 35 9 34 14 C33 19 25 21 27 27 C29 32 40 31 47 35 L55 40 L44 41 C40 41 35 40 32 36 M42 41 V52"/>
+      </g>
+    </svg>
+
+    <div class="lockup">
+      <span class="name">heron</span>
+      <span class="slash">/</span>
+      <span class="co">SECURITY</span>
+    </div>
+
+    <span class="status">Under construction</span>
+
+    <p>We are building an AI security operations platform that triages alerts, investigates, and writes the case.</p>
+    <p class="muted">This site is not ready yet. Check back soon.</p>
+
+    <div class="contact">
+      <span class="muted">Get in touch:</span>
+      <a href="mailto:hello@heronsecurity.io">hello@heronsecurity.io</a>
+    </div>
+  </main>
+
+  <footer>&copy; <span id="y">2026</span> Heron Security</footer>
+  <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
+</body>
+</html>
