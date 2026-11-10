@@ -1,120 +1,50 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Heron Security</title>
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://heronsecurity.io/">
-<meta property="og:site_name" content="Heron Security">
-<meta property="og:title" content="Heron Security">
-<meta property="og:description" content="Site under construction. Contact hello@heronsecurity.io">
-<meta property="og:image" content="https://heronsecurity.io/og-image.png?v=2">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Heron Security">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#111111">
-<meta name="description" content="Heron Security. Site under construction. Contact hello@heronsecurity.io">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cg transform='translate(4 4) scale(.875)'%3E%3Cpath fill='none' stroke='%23000' stroke-width='4.6' stroke-linecap='round' stroke-linejoin='round' d='M8 9 L26 12 C29 8 35 9 34 14 C33 19 25 21 27 27 C29 32 40 31 47 35 L55 40 L44 41 C40 41 35 40 32 36 M42 41 V52'/%3E%3C/g%3E%3C/svg%3E">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
-<style>
-  :root {
-    --bg: #ffffff;
-    --fg: #000000;
-    --muted: #6b6b6b;
-    --line: #000000;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --bg: #000000;
-      --fg: #ffffff;
-      --muted: #8f8f8f;
-      --line: #ffffff;
-    }
-  }
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  html, body { height: 100%; }
-  body {
-    background: var(--bg);
-    color: var(--fg);
-    font: 400 14px/1.6 "Geist Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-    display: flex;
-    flex-direction: column;
-    padding: 24px 16px;
-  }
-  main {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
-    max-width: 520px;
-    margin: 0 auto;
-  }
-  .mark { width: 56px; height: 56px; color: var(--fg); margin-bottom: 28px; }
-  .lockup { display: flex; align-items: baseline; gap: 10px; margin-bottom: 40px; }
-  .lockup .name { font-size: 28px; font-weight: 500; letter-spacing: -0.02em; }
-  .lockup .slash { color: var(--muted); font-size: 20px; }
-  .lockup .co { font-size: 12px; letter-spacing: 0.32em; }
-  .status {
-    display: inline-block;
-    border: 1px solid var(--line);
-    padding: 4px 10px;
-    font-size: 12px;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    margin-bottom: 20px;
-    align-self: flex-start;
-  }
-  .status::before { content: "\25A0  "; animation: blink 1.2s steps(1) infinite; }
-  @keyframes blink { 50% { opacity: 0; } }
-  @media (prefers-reduced-motion: reduce) { .status::before { animation: none; } }
-  p { margin-bottom: 16px; }
-  .muted { color: var(--muted); }
-  a { color: var(--fg); text-decoration: none; border-bottom: 1px solid var(--fg); }
-  a:hover { background: var(--fg); color: var(--bg); }
-  .contact { margin-top: 24px; padding-top: 16px; border-top: 1px solid var(--line); }
-  footer {
-    width: 100%;
-    max-width: 520px;
-    margin: 0 auto;
-    font-size: 12px;
-    color: var(--muted);
-  }
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Heron Security</title>
+  <meta name="description" content="Heron Security is an AI SOC. Its agent, Hero, covers your alerts around the clock: triage, investigation, threat hunting, response and detection. Coming soon.">
+  <meta name="theme-color" content="#060606">
+  <link rel="canonical" href="https://heronsecurity.io/">
+  <!-- the link's preview where it's pasted (Slack, iMessage, WhatsApp, LinkedIn, Discord, X): the card and its image;
+       the image's URL is absolute, as the platforms need, and versioned (?v=) so a changed image is fetched again -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Heron Security">
+  <meta property="og:url" content="https://heronsecurity.io/">
+  <meta property="og:title" content="Heron Security">
+  <meta property="og:description" content="An AI SOC. Every alert worked, 24/7. Your analysts make the call. Coming soon.">
+  <meta property="og:image" content="https://heronsecurity.io/images/og-image.png?v=2">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Heron Security: every alert worked, 24/7. Your analysts make the call. Coming soon.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Heron Security">
+  <meta name="twitter:description" content="An AI SOC. Every alert worked, 24/7. Your analysts make the call. Coming soon.">
+  <meta name="twitter:image" content="https://heronsecurity.io/images/og-image.png?v=2">
+  <!-- the icons: the .ico and PNGs for the apps that show a link's favicon beside it and can't read SVG, the SVG for
+       browsers that can, the touch icon for a phone's home screen; favicon.ico stays at the top, where apps look for
+       it unasked, the rest are in icons/ -->
+  <link rel="icon" href="./favicon.ico" sizes="16x16 32x32 48x48">
+  <link rel="icon" href="./icons/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="icon" href="./icons/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png">
+  <link rel="manifest" href="./icons/site.webmanifest">
+  <script type="module" crossorigin src="./assets/index-DUnxpfAt.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-BhPSmwvH.css">
+  <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon="{&quot;token&quot;:&quot;5f0f65ea18f441899b0f8e114f956b77&quot;}"></script>
 </head>
 <body>
-  <main>
-    <svg class="mark" viewBox="0 0 64 64" aria-hidden="true">
-      <g transform="translate(4 4) scale(.875)">
-        <path fill="none" stroke="currentColor" stroke-width="4.6" stroke-linecap="round" stroke-linejoin="round" d="M8 9 L26 12 C29 8 35 9 34 14 C33 19 25 21 27 27 C29 32 40 31 47 35 L55 40 L44 41 C40 41 35 40 32 36 M42 41 V52"/>
-      </g>
-    </svg>
-
-    <div class="lockup">
-      <span class="name">heron</span>
-      <span class="slash">/</span>
-      <span class="co">SECURITY</span>
-    </div>
-
-    <span class="status">Under construction</span>
-
-    <p>We are building an AI security operations platform that triages alerts, investigates, and writes the case.</p>
-    <p class="muted">This site is not ready yet. Check back soon.</p>
-
-    <div class="contact">
-      <span class="muted">Get in touch:</span>
-      <a href="mailto:hello@heronsecurity.io">hello@heronsecurity.io</a>
-    </div>
-  </main>
-
-  <footer>&copy; <span id="y">2026</span> Heron Security</footer>
-  <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
-  <!-- Cloudflare Web Analytics -->
-  <script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "5f0f65ea18f441899b0f8e114f956b77"}'></script>
-  <!-- End Cloudflare Web Analytics -->
+  <!-- the website's landing page while it's built: the page is drawn by main.ts (../src/hn/pond.ts); this is what shows
+       without JavaScript -->
+  <noscript>
+    <main class="site-plain">
+      <h1>Heron Security</h1>
+      <p>Under construction. Heron Security is an AI SOC. Its agent, Hero, covers your alerts around the clock: it triages
+        each one into a case, investigates, hunts and stages the response, and shows every step it took.</p>
+      <p>Coming soon. Write to hello at heronsecurity dot io.</p>
+    </main>
+  </noscript>
 </body>
 </html>
